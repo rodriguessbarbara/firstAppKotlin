@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">firstAppKotlin</string>
-    <string name="type_your_name">Digite seu nome...</string>
+    <string name="type_your_name">Digite seu nome…</string>
     <string name="send">Enviar</string>
     <string name="hello_world">Olá Mundo!</string>
     <string name="hello_name">Olá, %1$s!</string>
+    <string name="send_to_result_screen">Enviar para Tela de Resultado</string>
+    <string name="action_settings">Configurações</string>
+    <string name="menu_gallery">Galeria</string>
 </resources>
