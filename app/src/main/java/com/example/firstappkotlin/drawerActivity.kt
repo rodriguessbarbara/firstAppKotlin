@@ -1,5 +1,6 @@
 package com.example.firstappkotlin
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
@@ -27,6 +28,10 @@ class drawerActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarDrawer.toolbar)
 
         binding.appBarDrawer.fab.setOnClickListener { view ->
+            val intent = Intent(this, MainActivity::class.java)
+
+            startActivity(intent)
+
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }

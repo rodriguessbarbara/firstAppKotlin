@@ -14,10 +14,8 @@
         android:theme="@style/Theme.FirstAppKotlin"
         tools:targetApi="31">
         <activity
-            android:name=".drawerActivity"
-            android:exported="true"
-            android:label="@string/title_activity_drawer"
-            android:theme="@style/Theme.FirstAppKotlin.NoActionBar">
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,8 +23,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".drawerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/Theme.FirstAppKotlin.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
