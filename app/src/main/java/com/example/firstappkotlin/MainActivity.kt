@@ -19,7 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         btnEnviar.setOnClickListener {
             if (nome.text.isNotBlank()) {
-                tvResultado.text = "Olá, ${nome.text}!"
+                tvResultado.text = getString(R.string.hello_name, nome.text.toString())
+            } else {
+                nome.error = getString(R.string.type_your_name)
             }
         }
     }
