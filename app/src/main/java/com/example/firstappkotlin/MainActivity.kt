@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
         val btnEnviar = findViewById<Button>(R.id.btnEnviar)
 
         btnEnviar.setOnClickListener {
-            tvResultado.text = "Olá, ${nome.text}!"
+            if (nome.text.isNotBlank()) {
+                tvResultado.text = "Olá, ${nome.text}!"
+            }
         }
     }
 }
