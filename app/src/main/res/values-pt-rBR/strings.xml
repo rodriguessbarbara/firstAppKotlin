@@ -8,4 +8,7 @@
     <string name="send_to_result_screen">Enviar para Tela de Resultado</string>
     <string name="action_settings">Configurações</string>
     <string name="menu_gallery">Galeria</string>
+    <string name="get_result">Obter Resultado</string>
+    <string name="no">Não</string>
+    <string name="yes">Sim</string>
 </resources>

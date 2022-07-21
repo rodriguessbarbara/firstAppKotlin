@@ -17,5 +17,8 @@
     <string name="menu_slideshow" translatable="false">Slideshow</string>
     <string name="send_to_result_screen">Send to Result Screen</string>
     <string name="resultado" translatable="false">Resultado</string>
+    <string name="get_result">Get Result</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
 
 </resources>

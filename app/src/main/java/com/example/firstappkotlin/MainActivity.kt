@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         val nome = findViewById<EditText>(R.id.editTextTextName)
         val btnEnviar = findViewById<Button>(R.id.btnEnviar)
         val btnEnviar2 = findViewById<Button>(R.id.btnEnviar2)
+        val btnEnviar3 = findViewById<Button>(R.id.btnEnviar3)
+
 
         btnEnviar.setOnClickListener {
             if (nome.text.isNotBlank()) {
@@ -37,6 +39,13 @@ class MainActivity : AppCompatActivity() {
             } else {
                 nome.error = getString(R.string.type_your_name)
             }
+        }
+
+        btnEnviar3.setOnClickListener {
+            val intent = Intent(this, SendResultActivity::class.java)
+            val requestCode = 1
+
+            startActivityForResult(intent, requestCode)
         }
     }
 }
