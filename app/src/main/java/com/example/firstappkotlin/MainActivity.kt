@@ -1,6 +1,7 @@
 package com.example.firstappkotlin
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -46,6 +47,15 @@ class MainActivity : AppCompatActivity() {
             val requestCode = 1
 
             startActivityForResult(intent, requestCode)
+        }
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null) {
+            val result = data.getStringExtra("RESULT")
+            val tvResultado = findViewById<TextView>(R.id.textoView)
+            tvResultado.text = result
         }
     }
 }

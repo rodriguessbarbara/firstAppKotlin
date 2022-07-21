@@ -1,7 +1,8 @@
 package com.example.firstappkotlin
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -13,9 +14,20 @@ class SendResultActivity : AppCompatActivity() {
         val btnYes = findViewById<Button>(R.id.btnYes)
         val btnNo = findViewById<Button>(R.id.btnNo)
 
-        val listener = View.OnClickListener { }
+        btnYes.setOnClickListener {
+            val intent = Intent()
+            intent.putExtra("RESULT", getString(R.string.yes))
+            setResult(Activity.RESULT_OK, intent)
 
-        btnYes.setOnClickListener(listener)
-        btnNo.setOnClickListener(listener)
+            finish()
+        }
+
+        btnNo.setOnClickListener{
+            val intent = Intent()
+            intent.putExtra("RESULT", getString(R.string.no))
+            setResult(Activity.RESULT_OK, intent)
+
+            finish()
+        }
     }
 }
