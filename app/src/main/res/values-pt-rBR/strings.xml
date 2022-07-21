@@ -11,4 +11,7 @@
     <string name="get_result">Obter Resultado</string>
     <string name="no">Não</string>
     <string name="yes">Sim</string>
+    <string name="cancel">Cancelar</string>
+    <string name="Activity_was_cancelled">Atividade foi Cancelada</string>
+    <string name="data_received">Dado Recebido: %1$s</string>
 </resources>

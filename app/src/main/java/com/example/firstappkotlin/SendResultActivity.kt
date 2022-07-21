@@ -13,6 +13,8 @@ class SendResultActivity : AppCompatActivity() {
 
         val btnYes = findViewById<Button>(R.id.btnYes)
         val btnNo = findViewById<Button>(R.id.btnNo)
+        val btnCancel = findViewById<Button>(R.id.btnCancel)
+
 
         btnYes.setOnClickListener {
             val intent = Intent()
@@ -26,6 +28,12 @@ class SendResultActivity : AppCompatActivity() {
             val intent = Intent()
             intent.putExtra("RESULT", getString(R.string.no))
             setResult(Activity.RESULT_OK, intent)
+
+            finish()
+        }
+
+        btnCancel.setOnClickListener {
+            setResult(Activity.RESULT_CANCELED)
 
             finish()
         }

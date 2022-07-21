@@ -20,5 +20,8 @@
     <string name="get_result">Get Result</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="Activity_was_cancelled">Activity was cancelled</string>
+    <string name="data_received">Data received: %1$s</string>
 
 </resources>

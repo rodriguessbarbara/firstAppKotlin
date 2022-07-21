@@ -52,10 +52,18 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null) {
-            val result = data.getStringExtra("RESULT")
-            val tvResultado = findViewById<TextView>(R.id.textoView)
-            tvResultado.text = result
+        if (requestCode == 1 ) {
+
+            if (resultCode == Activity.RESULT_OK && data != null) {
+                val result = data.getStringExtra("RESULT")
+                val tvResultado = findViewById<TextView>(R.id.textoView)
+                tvResultado.text = getString(R.string.data_received, result)
+
+            } else if (requestCode == Activity.RESULT_CANCELED ) {
+                val tvResultado = findViewById<TextView>(R.id.textoView)
+                tvResultado.text = getString(R.string.Activity_was_cancelled)
+            }
         }
+
     }
 }
