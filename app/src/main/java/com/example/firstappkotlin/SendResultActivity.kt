@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 
 class SendResultActivity : AppCompatActivity() {
@@ -17,19 +18,11 @@ class SendResultActivity : AppCompatActivity() {
 
 
         btnYes.setOnClickListener {
-            val intent = Intent()
-            intent.putExtra("RESULT", getString(R.string.yes))
-            setResult(Activity.RESULT_OK, intent)
-
-            finish()
+            sendResult(R.string.yes)
         }
 
         btnNo.setOnClickListener{
-            val intent = Intent()
-            intent.putExtra("RESULT", getString(R.string.no))
-            setResult(Activity.RESULT_OK, intent)
-
-            finish()
+            sendResult(R.string.no)
         }
 
         btnCancel.setOnClickListener {
@@ -37,5 +30,13 @@ class SendResultActivity : AppCompatActivity() {
 
             finish()
         }
+    }
+
+    private fun sendResult(@StringRes stringResId: Int) {
+        val intent = Intent()
+        intent.putExtra("RESULT", getString(stringResId))
+        setResult(RESULT_OK, intent)
+
+        finish()
     }
 }
